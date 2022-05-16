@@ -1,0 +1,9 @@
+name:nuild-source-code
+
+on:
+  push:
+    branches:[main]
+
+jobs:
+  build:
+    runs-on:[ unbantu ]
