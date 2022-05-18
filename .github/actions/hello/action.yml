@@ -8,9 +8,9 @@ name: 'Hello World'
 outputs:
   jojo:
 #    description: "Random number"
-    value: ${{ sercets.JO_JO }}
+    value: ${{ secrets.JO_JO }}
 runs:
   using: "composite"
   steps:
-    - run: echo Hello ${{ sercets.JO_JO }}.
+    - run: echo Hello ${{ secrets.JO_JO }}.
       shell: bash
