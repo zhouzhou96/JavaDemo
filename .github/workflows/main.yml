@@ -23,6 +23,6 @@ jobs:
       
       - uses: ./.github/actions/hello
         with:
-          who-to-greet: 'jojo'
+          who-to-greet: ${{ sercets.JO_JO }}
 
 
