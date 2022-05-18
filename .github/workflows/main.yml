@@ -23,6 +23,6 @@ jobs:
       
       - uses: ./.github/actions/hello
         with:
-          who-to-greet: ${{ ENV_}}
+          who-to-greet: ${{ secrets.HELLO_WORLD }}
 
 
