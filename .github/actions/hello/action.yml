@@ -6,11 +6,14 @@ name: 'Hello World'
 #    required: true
 #    default: 'World'
 outputs:
-  jojo:
-#    description: "Random number"
-    value: ${{ secrets.JO_JO }}
+  random-number:
+    description: "Random number"
+    value: ${{ steps.random-number-generator.outputs.random-id }}
 runs:
   using: "composite"
   steps:
     - run: echo Hello .
+      shell: bash
+    - id: random-number-generator
+      run: echo "::set-output name=random-number::$(echo $RANDOM)"
       shell: bash
