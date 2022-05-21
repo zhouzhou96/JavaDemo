@@ -3,6 +3,11 @@ name: CI
 
 on:
   workflow_dispatch:
+    inputs:
+      username:
+        required: true
+        type: string
+
 
 
 jobs:
@@ -18,5 +23,9 @@ jobs:
           who-to-greet: ${{ secrets.JO_JO }}
   ss:
       uses: ./.github/workflows/reusing.yml
+      with:
+        username: ${{ github.event.inputs.username}}
+      secrets:
+          envPAT: ${{ secrets.envPAT }}
 
 
