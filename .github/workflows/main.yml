@@ -8,10 +8,7 @@ on:
 jobs:
 
   build:
-
     runs-on: ubuntu-latest
-
-
     steps:
 
       - uses: actions/checkout@v3
@@ -19,5 +16,7 @@ jobs:
       - uses: ./.github/actions/hello
         with:
           who-to-greet: ${{ secrets.JO_JO }}
+  ss:
+      uses: ./.github/workflows/reusing.yml
 
 
