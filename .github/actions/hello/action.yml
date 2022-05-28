@@ -1,6 +1,7 @@
 name: 'Hello World'
 
 runs:
+using: "composite"
   steps:
     - run: echo Hello .
       shell: bash
