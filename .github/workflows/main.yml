@@ -19,11 +19,6 @@ jobs:
       - uses: ./.github/actions/hello
         with:
           who-to-greet: ${{ secrets.JO_JO }}
-  ss:
-      uses: ./.github/workflows/reusing.yml
-      with:
-        username: ${{ github.event.inputs.username}}
-      secrets:
-          envPAT: ${{ secrets.envPAT }}
+
 
 
