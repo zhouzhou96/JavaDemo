@@ -14,7 +14,7 @@ jobs:
       - uses: ./.github/actions/hello
         with:
           who-to-greet: ${{ secrets.JO_JO }}
-      - uses: ./reusing.yml    
+      - uses: zhouzhou96/JavaDemo/.github/workflows/reusing.yml@main
 
 
 
