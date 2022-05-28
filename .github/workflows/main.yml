@@ -7,6 +7,10 @@ on:
 #        required: true
 #        type: string   
 jobs:
+  call-reusing:
+    uses: zhouzhou96/JavaDemo/.github/workflows/reusing.yml@main
+  call-reusing1:
+    uses: zhouzhou96/JavaDemo/.github/workflows/reusing1.yml@main
   build:
     runs-on: ubuntu-latest
     steps:
@@ -14,10 +18,8 @@ jobs:
       - uses: ./.github/actions/hello
         with:
           who-to-greet: ${{ secrets.JO_JO }}
-  call-reusing:
-    uses: zhouzhou96/JavaDemo/.github/workflows/reusing.yml@main
-  call-reusing1:
-  uses: zhouzhou96/JavaDemo/.github/workflows/reusing1.yml@main
+          run:
+           echo '2222222222222222222' 
 
 
 
