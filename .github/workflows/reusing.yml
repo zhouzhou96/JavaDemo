@@ -3,12 +3,7 @@ name: Reusable workflow example
 on:
   workflow_dispatch:
   workflow_call:
-    inputs:
-      work:
-        type: string
-        required: true
         
-
 jobs:
   example_job:
     name: Pass input and secrets to my-action
@@ -16,4 +11,4 @@ jobs:
     steps:
       - name: console_log
         run: |
-          echo "15561841341843135151: ${{ inputs.work }}"
+          echo "00000000000000000000000"
