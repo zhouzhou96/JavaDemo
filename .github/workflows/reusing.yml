@@ -2,20 +2,12 @@ name: Reusable workflow example
 
 on:
   workflow_call:
-    inputs:
-      username:
-        required: true
-        type: string
-    secrets:
-      token:
-        required: true
 
 jobs:
   example_job:
     name: Pass input and secrets to my-action
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/actions/hello
-        with:
-          username: ${{ inputs.username }}
-          token: ${{ secrets.token }}
+      - name: console_log
+        run: |
+          echo "15561841341843135151"
