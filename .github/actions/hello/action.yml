@@ -1,7 +1,7 @@
 name: 'Hello World'
 
 runs:
-  using: "composite"
+  using: "node16"
   steps:
     - run: echo Hello .
       shell: bash
