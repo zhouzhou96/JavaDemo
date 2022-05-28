@@ -18,8 +18,9 @@ jobs:
       - uses: ./.github/actions/hello
         with:
           who-to-greet: ${{ secrets.JO_JO }}
-          run:
-           echo '2222222222222222222' 
+      - name: console_log
+        run: |
+          echo "2222222222222222222222"
 
 
 
