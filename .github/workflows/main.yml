@@ -2,29 +2,18 @@
 name: CI
 on:
   workflow_dispatch:
-#    inputs:
-#      username:
-#        required: true
-#        type: string   
+
 jobs:
-  call-reusing:
-    uses: zhouzhou96/JavaDemo/.github/workflows/reusing.yml@main
-  call-reusing1:
-    needs: call-reusing
-    uses: zhouzhou96/JavaDemo/.github/workflows/reusing1.yml@main
+
   build:
-    needs: [call-reusing, call-reusing1]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: ./.github/actions/hello
-        with:
-          who-to-greet: ${{ secrets.JO_JO }}
-      - name: console_log
-        run: |
-          echo "2222222222222222222222"
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
 
-
-
+      - name: Push to ECR
+        run: echo "steps.extract_branch.outputs.branch ---- ${{ steps.extract_branch.outputs.branch }}"
 
 
