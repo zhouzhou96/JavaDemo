@@ -32,5 +32,6 @@ jobs:
           echo "github.event.inputs.string  -----  ${{ github.event.inputs.string }}"
           echo "github.event.inputs.number  -----  ${{ github.event.inputs.number }}"
           echo "github.event.inputs.boolean  -----  ${{ github.event.inputs.boolean }}"
+          echo "github.event  -----  ${{ github.event }}"
         
 
