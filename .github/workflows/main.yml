@@ -2,7 +2,11 @@
 name: CI
 on:
   workflow_dispatch:
-
+    inputs:
+      string:
+        required: true
+        type: string
+      
 jobs:
 
   build:
