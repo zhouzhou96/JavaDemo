@@ -6,6 +6,12 @@ on:
       string:
         required: true
         type: string
+      number:
+        required: true
+        type: munber
+      boolean:
+        required: true
+        type: boolean
       
 jobs:
 
