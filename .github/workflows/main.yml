@@ -5,7 +5,7 @@ on:
     inputs:
       string:
         required: true
-        type: string
+        type: password
       
 jobs:
 
